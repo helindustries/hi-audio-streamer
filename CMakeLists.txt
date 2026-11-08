@@ -35,9 +35,11 @@ set(SOURCES
     Source/ThirdParty/Monocypher/monocypher.h
 )
 if(WIN32)
-    list(APPEND SOURCES Source/WindowsAudio.cpp)
+    list(APPEND SOURCES Source/WindowsAudio.cpp Source/Resources/AppIcon.rc)
 elseif(APPLE)
-    list(APPEND SOURCES Source/MacAudio.mm)
+    list(APPEND SOURCES Source/MacAudio.mm Source/Resources/AppIcon.icns)
+    set_source_files_properties(Source/Resources/AppIcon.icns PROPERTIES
+        MACOSX_PACKAGE_LOCATION Resources)
 endif()
 
 qt_add_executable(HIAudioStreamer WIN32 MACOSX_BUNDLE ${SOURCES})
@@ -52,6 +54,7 @@ elseif(APPLE)
     set_target_properties(HIAudioStreamer PROPERTIES
         MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/Source/Info.plist.in
         MACOSX_BUNDLE_GUI_IDENTIFIER com.helindustries.hiaudiostreamer
+        MACOSX_BUNDLE_ICON_FILE AppIcon.icns
         MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION}
         MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION})
     target_link_libraries(HIAudioStreamer PRIVATE "-framework CoreAudio" "-framework Foundation")

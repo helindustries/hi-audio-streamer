@@ -23,6 +23,7 @@ LicenseFile={#SourceDir}\LICENSE
 OutputDir={#BuildDir}
 OutputBaseFilename={#AppName}-@PROJECT_VERSION@-windows-x64-setup
 UninstallDisplayIcon={app}\{#AppExe}
+SetupIconFile={#SourceDir}\Source\Resources\AppIcon.ico
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern

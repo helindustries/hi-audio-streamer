@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+    <defs>
+        <linearGradient id="background" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#34477d"/>
+            <stop offset="1" stop-color="#161b36"/>
+        </linearGradient>
+        <linearGradient id="waves" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#8ce6a8"/>
+            <stop offset="1" stop-color="#3cb76a"/>
+        </linearGradient>
+    </defs>
+    <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#background)"/>
+    <g transform="translate(512 512) scale(0.86) translate(-540 -512)">
+        <polygon points="250,420 360,420 500,290 500,734 360,604 250,604" fill="#ffffff"
+                 stroke="#ffffff" stroke-width="40" stroke-linejoin="round"/>
+        <g fill="none" stroke="url(#waves)" stroke-width="54" stroke-linecap="round">
+            <path d="M566.4,397.1 A150,150 0 0 1 566.4,626.9"/>
+            <path d="M637.1,312.8 A260,260 0 0 1 637.1,711.2"/>
+            <path d="M707.8,228.6 A370,370 0 0 1 707.8,795.4"/>
+        </g>
+    </g>
+</svg>
